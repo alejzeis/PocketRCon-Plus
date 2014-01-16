@@ -1,4 +1,4 @@
 PocketRCon-Plus
 ===============
 
-A PocketMine plugin and client that make a better RCon solution
+A PocketMine plugin(www.pocketmine.net) and client that make a better RCon solution
