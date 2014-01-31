@@ -1,0 +1,45 @@
+PocketRCon-server protocol v. 0.1
+
+Stage 1: Client connection:
+	When a client connects to the server, the server will send a welcome message such as:
+	"Connection accepted"
+	This must be included in all server implementations.
+	
+Stage 2: Authentication:
+	Once the client is connected, the commands are limited. To actually start running commands, they mush authenticate.
+	Commands are(All caps):
+		USER
+		PASSWORD
+	
+	Each one is self explanatory.
+	The password must be sent and recived by Base64.
+	
+Stage 3: Main stage:
+	Now authenticated, the client can run commands, chat, and do other things.
+	Commands:
+		RUN [command] [args]
+		CHAT [name] [message]
+		DISCONNECT
+	
+	RUN:
+		Usage: RUN [command] [args]
+		This runs a command specified in the argument [command].
+	
+	CHAT:
+		Usage: CHAT [name] [message]
+		Says [message] as the [name].
+		
+	DISCONNECT:
+		Usage: DISCONNECT
+		Disconnects from the server.
+		
+
+Server Errors:
+	
+	501 NOT IMPLEMENTED:
+		This HTTP code means that the command does not exist or used improperly.
+		
+	500 INTERNAL ERROR:
+		For some reason the server failed :(
+		
+	
