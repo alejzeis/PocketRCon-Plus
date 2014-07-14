@@ -38,6 +38,9 @@ Server Errors:
 	
 	501 NOT IMPLEMENTED:
 		This HTTP code means that the command does not exist or used improperly.
+	
+	401: NOT AUTHORIZED:
+		The client has not authenticated, and is trying to run a command that requires AUTH.
 		
 	500 INTERNAL ERROR:
 		For some reason the server failed :(
